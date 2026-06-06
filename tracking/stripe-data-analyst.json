@@ -1,0 +1,29 @@
+{
+  "id": "stripe-data-analyst-20260511",
+  "company": "Stripe",
+  "role": "Data Analyst",
+  "date_applied": "2026-05-11",
+  "status": "interviewing",
+  "source": "company site",
+  "job_link": "https://stripe.com/jobs/listing/data-analyst/5021843",
+  "contacts": [],
+  "follow_up_date": "2026-06-10",
+  "history": [
+    {
+      "date": "2026-05-11",
+      "status": "applied",
+      "note": "Initial application"
+    },
+    {
+      "date": "2026-05-18",
+      "status": "screening",
+      "note": "Recruiter scheduled phone screen"
+    },
+    {
+      "date": "2026-05-22",
+      "status": "interviewing",
+      "note": "Phone screen went well; onsite scheduled 2026-06-09"
+    }
+  ],
+  "notes": "Phone screen 5/22 went well; onsite scheduled 6/9 with analytics team"
+}

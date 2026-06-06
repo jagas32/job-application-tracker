@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Job Application Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+ body{font-family:-apple-system,'Segoe UI',sans-serif;margin:0;background:#f1f5f9;color:#0f172a;padding:24px}
+ h1{margin:0 0 4px} .sub{color:#64748b;margin-bottom:24px}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:24px}
+ .card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+ .num{font-size:30px;font-weight:700} .lbl{color:#64748b;font-size:13px;margin-top:4px}
+ .row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+ .panel{background:#fff;border-radius:12px;padding:18px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+ .panel h2{font-size:15px;margin:0 0 12px;color:#334155}
+ table{width:100%;border-collapse:collapse;font-size:14px}
+ th{text-align:left;color:#64748b;font-weight:600;padding:8px;border-bottom:2px solid #e2e8f0}
+ td{padding:8px;border-bottom:1px solid #f1f5f9}
+ .badge{padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600}
+ @media(max-width:800px){.row{grid-template-columns:1fr}}
+</style></head><body>
+<h1>Job Application Dashboard</h1>
+<div class="sub">Generated 2026-06-06 · 5 applications tracked</div>
+<div class="cards"><div class="card"><div class="num">5</div><div class="lbl">Total applications</div></div><div class="card"><div class="num">4</div><div class="lbl">Active</div></div><div class="card"><div class="num">60%</div><div class="lbl">Response rate</div></div><div class="card"><div class="num">0</div><div class="lbl">Offers</div></div><div class="card"><div class="num">8.7</div><div class="lbl">Avg days to response</div></div></div>
+<div class="row">
+ <div class="panel"><h2>Pipeline by stage</h2><canvas id="stages" height="220"></canvas></div>
+ <div class="panel"><h2>Applications per week</h2><canvas id="weekly" height="220"></canvas></div>
+</div>
+<div class="panel" style="margin-bottom:24px"><h2>Follow-ups</h2>
+<table><tr><th>Due</th><th>Company</th><th>Role</th><th>Status</th><th></th></tr><tr><td>2026-06-02</td><td>Datadog</td><td>Business Intelligence Analyst</td><td><span class="badge" style="background:#f59e0b1a;color:#f59e0b">screening</span></td><td>⚠️ overdue</td></tr><tr><td>2026-06-09</td><td>Cloudflare</td><td>Analytics Engineer</td><td><span class="badge" style="background:#64748b1a;color:#64748b">applied</span></td><td>upcoming</td></tr><tr><td>2026-06-09</td><td>HubSpot</td><td>Marketing Operations Analyst</td><td><span class="badge" style="background:#64748b1a;color:#64748b">applied</span></td><td>upcoming</td></tr><tr><td>2026-06-10</td><td>Stripe</td><td>Data Analyst</td><td><span class="badge" style="background:#3b82f61a;color:#3b82f6">interviewing</span></td><td>upcoming</td></tr></table></div>
+<div class="panel"><h2>All applications</h2>
+<table><tr><th>Company</th><th>Role</th><th>Status</th><th>Applied</th><th>Days in stage</th><th>Next follow-up</th></tr><tr><td>Cloudflare</td><td>Analytics Engineer</td><td><span class="badge" style="background:#64748b1a;color:#64748b">applied</span></td><td>2026-06-02</td><td>4</td><td>2026-06-09</td></tr><tr><td>HubSpot</td><td>Marketing Operations Analyst</td><td><span class="badge" style="background:#64748b1a;color:#64748b">applied</span></td><td>2026-05-26</td><td>11</td><td>2026-06-09</td></tr><tr><td>Datadog</td><td>Business Intelligence Analyst</td><td><span class="badge" style="background:#f59e0b1a;color:#f59e0b">screening</span></td><td>2026-05-18</td><td>9</td><td>2026-06-02</td></tr><tr><td>Stripe</td><td>Data Analyst</td><td><span class="badge" style="background:#3b82f61a;color:#3b82f6">interviewing</span></td><td>2026-05-11</td><td>15</td><td>2026-06-10</td></tr><tr><td>Shopify</td><td>Data Analyst - Merchant Insights</td><td><span class="badge" style="background:#ef44441a;color:#ef4444">rejected</span></td><td>2026-04-29</td><td>17</td><td>—</td></tr></table></div>
+<script>
+new Chart(document.getElementById('stages'),{type:'bar',
+ data:{labels:["applied", "screening", "interviewing", "rejected"],datasets:[{data:[2, 1, 1, 1],
+ backgroundColor:["#64748b", "#f59e0b", "#3b82f6", "#ef4444"],borderRadius:6}]},
+ options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{stepSize:1}}}}});
+new Chart(document.getElementById('weekly'),{type:'line',
+ data:{labels:["Apr 27", "May 04", "May 11", "May 18", "May 25", "Jun 01"],datasets:[{data:[1, 0, 1, 1, 1, 1],borderColor:'#3b82f6',
+ backgroundColor:'rgba(59,130,246,.15)',fill:true,tension:.3}]},
+ options:{plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,ticks:{stepSize:1}}}}});
+</script></body></html>

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "shopify-data-analyst-merchant-insights-20260429",
+    "company": "Shopify",
+    "role": "Data Analyst - Merchant Insights",
+    "status": "rejected",
+    "date_applied": "2026-04-29"
+  },
+  {
+    "id": "stripe-data-analyst-20260511",
+    "company": "Stripe",
+    "role": "Data Analyst",
+    "status": "interviewing",
+    "date_applied": "2026-05-11"
+  },
+  {
+    "id": "datadog-business-intelligence-analyst-20260518",
+    "company": "Datadog",
+    "role": "Business Intelligence Analyst",
+    "status": "screening",
+    "date_applied": "2026-05-18"
+  },
+  {
+    "id": "hubspot-marketing-operations-analyst-20260526",
+    "company": "HubSpot",
+    "role": "Marketing Operations Analyst",
+    "status": "applied",
+    "date_applied": "2026-05-26"
+  },
+  {
+    "id": "cloudflare-analytics-engineer-20260602",
+    "company": "Cloudflare",
+    "role": "Analytics Engineer",
+    "status": "applied",
+    "date_applied": "2026-06-02"
+  }
+]
